@@ -6,6 +6,7 @@
     -12px -12px 25px rgba(59, 68, 81, 0.5);
   border-radius: 8px;
   padding: 25px;
+  cursor: pointer;
 }
 .eachElement {
   display: flex;
