@@ -1,0 +1,8 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a2037;
+  height: 91vh;
+  gap: 50px;
+}
