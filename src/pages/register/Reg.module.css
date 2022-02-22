@@ -1,0 +1,94 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 91vh;
+}
+.item {
+  width: 480px;
+  background: #1c2441;
+  box-shadow: 12px 12px 25px rgba(16, 16, 18, 0.5),
+    -12px -12px 25px rgba(59, 68, 81, 0.5);
+  border-radius: 8px;
+  padding: 30px;
+  color: #f0f0f0;
+}
+.title {
+  font-weight: bold;
+  font-size: 24px;
+  color: #ffffff;
+  text-align: center;
+}
+.forLabel {
+  margin-top: 20px;
+}
+.forLabel label input {
+  width: 100%;
+  background: #3b4568;
+  border: 1px solid #a4a7b3;
+  box-sizing: border-box;
+  border-radius: 4px;
+  height: 50px;
+  margin-top: 8px;
+  color: #ffffff;
+  padding-left: 10px;
+  font-size: 18px;
+}
+.checking {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+.terms {
+  color: #00c5ff;
+}
+
+.btn {
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(90deg, #0066ff 0%, #00d1ff 100%);
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  border: none;
+  margin-top: 50px;
+  box-shadow: 12px 12px 25px rgba(16, 16, 18, 0.5),
+    -12px -12px 25px rgba(59, 68, 81, 0.5);
+  cursor: pointer;
+}
+.linesArea {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.line {
+  border: 1px solid #e0e0e0;
+  width: 180px;
+}
+.socMedia {
+  margin-top: 20px;
+  height: 50px;
+  background: #3b4568;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.socMedia svg {
+  margin-right: 15px;
+}
+.already {
+  text-align: center;
+  color: #828282;
+}
+.already span {
+  color: #00c5ff;
+}
+@media only screen and (max-width: 450px) {
+  .main {
+    zoom: 75%;
+  }
+}
