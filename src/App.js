@@ -7,7 +7,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Openpage />} />
-        <Route path="/registration" element={<Register />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
     </BrowserRouter>
   );

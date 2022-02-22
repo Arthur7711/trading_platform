@@ -6,6 +6,13 @@ import { ReactComponent as Google } from "../../assets/images/google.svg";
 import { ReactComponent as Fb } from "../../assets/images/fb.svg";
 
 const Register = () => {
+  function showingInp(e) {
+    if (e.target.parentNode.parentNode.childNodes[1].type === "password") {
+      e.target.parentNode.parentNode.childNodes[1].type = "text";
+    } else if (e.target.parentNode.parentNode.childNodes[1].type === "text") {
+      e.target.parentNode.parentNode.childNodes[1].type = "password";
+    }
+  }
   return (
     <>
       <Logregheader />
@@ -25,9 +32,10 @@ const Register = () => {
             </label>
           </div>
           <div className={styles.forLabel}>
-            <label>
+            <label className={styles.passLab}>
               Password
-              <input type="text" />
+              <input type="password" />
+              <Eye onClick={(e) => showingInp(e)} />
             </label>
           </div>
           <label className={styles.checking}>
@@ -51,7 +59,9 @@ const Register = () => {
             <Fb />
             Sign up with Facebook
           </div>
-          <p className={styles.already}>Already registered? <span>Log In</span></p>
+          <p className={styles.already}>
+            Already registered? <span>Log In</span>
+          </p>
         </div>
       </main>
     </>

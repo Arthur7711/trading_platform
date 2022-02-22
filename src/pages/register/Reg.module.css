@@ -34,6 +34,15 @@
   padding-left: 10px;
   font-size: 18px;
 }
+.passLab {
+  position: relative;
+}
+.passLab svg {
+  position: absolute;
+  top: 65%;
+  right: 20px;
+  cursor: pointer;
+}
 .checking {
   display: flex;
   justify-content: flex-start;
@@ -76,6 +85,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 .socMedia svg {
   margin-right: 15px;
