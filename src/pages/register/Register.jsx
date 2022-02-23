@@ -4,6 +4,7 @@ import styles from "./Reg.module.css";
 import { ReactComponent as Eye } from "../../assets/images/eye.svg";
 import { ReactComponent as Google } from "../../assets/images/google.svg";
 import { ReactComponent as Fb } from "../../assets/images/fb.svg";
+import {useNavigate} from 'react-router-dom';
 
 const Register = () => {
   function showingInp(e) {
@@ -13,6 +14,8 @@ const Register = () => {
       e.target.parentNode.parentNode.childNodes[1].type = "password";
     }
   }
+  const navigate = useNavigate();
+
   return (
     <>
       <Logregheader />
@@ -60,7 +63,7 @@ const Register = () => {
             Sign up with Facebook
           </div>
           <p className={styles.already}>
-            Already registered? <span>Log In</span>
+            Already registered? <span onClick={()=>navigate('/login')}>Log In</span>
           </p>
         </div>
       </main>

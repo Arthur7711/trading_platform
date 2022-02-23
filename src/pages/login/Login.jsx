@@ -4,6 +4,7 @@ import styles from "./Login.module.css";
 import { ReactComponent as Eye } from "../../assets/images/eye.svg";
 import { ReactComponent as Google } from "../../assets/images/google.svg";
 import { ReactComponent as Fb } from "../../assets/images/fb.svg";
+import {useNavigate} from 'react-router-dom';
 
 const Login = () => {
   function showingInp(e) {
@@ -13,6 +14,7 @@ const Login = () => {
       e.target.parentNode.parentNode.childNodes[1].type = "password";
     }
   }
+  const navigate = useNavigate();
   return (
     <>
       <Logregheader />
@@ -47,7 +49,7 @@ const Login = () => {
             Login with Facebook
           </div>
           <p className={styles.already}>
-          Don't have an account? <span>Sign up</span>
+          Don't have an account? <span onClick={()=>navigate('/register')}>Sign up</span>
           </p>
         </div>
       </main>

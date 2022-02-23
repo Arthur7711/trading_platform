@@ -90,6 +90,7 @@
 }
 .already span {
   color: #00c5ff;
+  cursor: pointer;
 }
 @media only screen and (max-width: 450px) {
   .main {
