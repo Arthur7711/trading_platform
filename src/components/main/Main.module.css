@@ -41,17 +41,17 @@
 .openMenu {
   padding: 10px 0;
   display: none;
+  transform: rotate(180deg);
 }
 .openMenu svg {
   cursor: pointer;
 }
 .navigate {
   grid-area: n;
-  width: 290px;
   background: #1c2441;
   box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.25);
   color: #fff;
-  /* min-height: 91vh; */
+  min-height: 100vh;
 }
 .navigate p {
   margin: 0;

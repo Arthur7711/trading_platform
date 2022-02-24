@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Avatar from "@mui/material/Avatar";
 import styles from "./Main.module.css";
 import { ReactComponent as BarcodeScanner } from "../../assets/images/barcode-scanner.svg";
@@ -19,6 +19,8 @@ import { ReactComponent as Search } from "../../assets/images/search.svg";
 import logo from "../../assets/images/logo.png";
 
 const Main = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   const menuItems = [
     { SVG: <DashboardSvg />, title: "Dashboard" },
     { SVG: <Suitcase />, title: "My portfolio" },
@@ -34,9 +36,19 @@ const Main = () => {
     { SVG: <Help />, title: "Help" },
     { SVG: <LogOut />, title: "Log out" },
   ];
-  
+  const handleCloseMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <div className={styles.page}>
+    <div
+      style={
+        isOpen === true
+          ? { gridTemplateColumns: "50px 1fr" }
+          : { gridTemplateColumns: "290px 1fr" }
+      }
+      className={styles.page}
+    >
       <header className={styles.header}>
         <div className={styles.headMainPart}>
           <div className={styles.search}>
@@ -49,18 +61,27 @@ const Main = () => {
       </header>
       <nav className={styles.navigate}>
         <div
-          style={{ transform: "rotate(180deg)" }}
+          style={isOpen === true ? { display: "block" } : { display: "none" }}
           className={styles.openMenu}
         >
-          <MenuOpener />
+          <MenuOpener
+            // style={{ transform: "rotate(180deg)" }}
+            onClick={handleCloseMenu}
+          />
         </div>
-        <div className={styles.navHeadPart}>
+        <div
+          style={isOpen === false ? { display: "flex" } : { display: "none" }}
+          className={styles.navHeadPart}
+        >
           <img src={logo} alt="logo" />
           <div className={styles.closeMenu}>
-            <MenuOpener />
+            <MenuOpener onClick={handleCloseMenu} />
           </div>
         </div>
-        <div className={styles.userArea}>
+        <div
+          style={isOpen === false ? { display: "block" } : { display: "none" }}
+          className={styles.userArea}
+        >
           <div className={styles.userInfo}>
             <Avatar alt="user" src={logo} sx={{ width: 56, height: 56 }} />
             <p className={styles.userName}>User Name</p>
@@ -84,7 +105,14 @@ const Main = () => {
             className={styles.menuItem}
           >
             {el.SVG}
-            <span className={styles.sp}>{el.title}</span>
+            <span
+              style={
+                isOpen === false ? { display: "flex" } : { display: "none" }
+              }
+              className={styles.sp}
+            >
+              {el.title}
+            </span>
           </div>
         ))}
       </nav>
