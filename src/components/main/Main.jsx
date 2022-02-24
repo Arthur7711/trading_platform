@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { Children, useState } from "react";
 import Avatar from "@mui/material/Avatar";
 import styles from "./Main.module.css";
 import { ReactComponent as BarcodeScanner } from "../../assets/images/barcode-scanner.svg";
@@ -17,8 +17,9 @@ import { ReactComponent as Trader } from "../../assets/images/trader.svg";
 import { ReactComponent as MenuOpener } from "../../assets/images/openClose.svg";
 import { ReactComponent as Search } from "../../assets/images/search.svg";
 import logo from "../../assets/images/logo.png";
+import { Link } from "react-router-dom";
 
-const Main = () => {
+const Main = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const menuItems = [
@@ -103,20 +104,22 @@ const Main = () => {
             style={i === 10 ? { marginTop: 50 } : null}
             key={i}
             className={styles.menuItem}
+            onClick={(e) => console.log(e)}
           >
             {el.SVG}
-            <span
+            <Link
+              to={el.title.toLowerCase()}
               style={
                 isOpen === false ? { display: "flex" } : { display: "none" }
               }
               className={styles.sp}
             >
               {el.title}
-            </span>
+            </Link>
           </div>
         ))}
       </nav>
-      <main className={styles.main}></main>
+      <main className={styles.main}>{children}</main>
     </div>
   );
 };

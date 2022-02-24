@@ -108,8 +108,10 @@
   padding-left: 20px;
   cursor: pointer;
 }
-.menuItem span {
+.menuItem a {
   margin-left: 20px;
+  text-decoration: none;
+  color: #fff;
 }
 .bottomPart {
   margin-top: 250px;
