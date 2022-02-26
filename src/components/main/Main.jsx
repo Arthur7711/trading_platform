@@ -23,19 +23,19 @@ const Main = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const menuItems = [
-    { SVG: <DashboardSvg />, title: "Dashboard" },
-    { SVG: <Suitcase />, title: "My portfolio" },
-    { SVG: <Trader />, title: "Top Traders" },
-    { SVG: <Shop />, title: "Markets" },
-    { SVG: <BarcodeScanner />, title: "Scanner" },
-    { SVG: <ChartSvg />, title: "Charts" },
-    { SVG: <Message />, title: "Trade Chat" },
-    { SVG: <Newspaper />, title: "News" },
-    { SVG: <Market />, title: "Trades" },
-    { SVG: <Some />, title: "Discover" },
-    { SVG: <Settings />, title: "Settings" },
-    { SVG: <Help />, title: "Help" },
-    { SVG: <LogOut />, title: "Log out" },
+    { SVG: <DashboardSvg />, title: "Dashboard", path: "/dashboard" },
+    { SVG: <Suitcase />, title: "My portfolio", path: "/portfolio" },
+    { SVG: <Trader />, title: "Top Traders", path: "/top" },
+    { SVG: <Shop />, title: "Markets", path: "/market" },
+    { SVG: <BarcodeScanner />, title: "Scanner", path: "/scanner" },
+    { SVG: <ChartSvg />, title: "Charts", path: "/charts" },
+    { SVG: <Message />, title: "Trade Chat", path: "/trade-chart" },
+    { SVG: <Newspaper />, title: "News", path: "/news" },
+    { SVG: <Market />, title: "Trades", path: "/trades" },
+    { SVG: <Some />, title: "Discover", path: "/discover" },
+    { SVG: <Settings />, title: "Settings", path: "/settings" },
+    { SVG: <Help />, title: "Help", path: "/help" },
+    { SVG: <LogOut />, title: "Log out", path: "/login" },
   ];
   const handleCloseMenu = () => {
     setIsOpen(!isOpen);
@@ -108,7 +108,7 @@ const Main = ({ children }) => {
           >
             {el.SVG}
             <Link
-              to={el.title.toLowerCase()}
+              to={el.path}
               style={
                 isOpen === false ? { display: "flex" } : { display: "none" }
               }
