@@ -8,6 +8,7 @@ import Openpage from "./pages/openPage/OpenPage";
 import Register from "./pages/register/Register";
 import Scanner from "./pages/scanner/Scanner";
 import Toptraders from "./pages/topTraders/TopTraders";
+import Tradechart from "./pages/tradeChart/Tradechart";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/market" element={<Markets />} />
         <Route path="/scanner" element={<Scanner />} />
         <Route path="/charts" element={<Charts />} />
+        <Route path="/trade-chart" element={<Tradechart />} />
       </Routes>
     </BrowserRouter>
   );
