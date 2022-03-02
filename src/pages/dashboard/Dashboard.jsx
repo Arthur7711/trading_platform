@@ -1,10 +1,13 @@
 import React from "react";
 import Main from "../../components/main/Main";
+import Topcarousel from "../../components/topCaroucel/TopCarousel";
 
 const Dashboard = () => {
   return (
     <div>
-      <Main> he;llo</Main>
+      <Main> 
+        <Topcarousel />
+      </Main>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import React, { Children, useState } from "react";
+import React, { useState } from "react";
 import Avatar from "@mui/material/Avatar";
 import styles from "./Main.module.css";
 import { ReactComponent as BarcodeScanner } from "../../assets/images/barcode-scanner.svg";
@@ -65,10 +65,7 @@ const Main = ({ children }) => {
           style={isOpen === true ? { display: "block" } : { display: "none" }}
           className={styles.openMenu}
         >
-          <MenuOpener
-            // style={{ transform: "rotate(180deg)" }}
-            onClick={handleCloseMenu}
-          />
+          <MenuOpener onClick={handleCloseMenu} />
         </div>
         <div
           style={isOpen === false ? { display: "flex" } : { display: "none" }}
