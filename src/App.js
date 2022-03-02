@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Charts from "./pages/charts/Charts";
 import Dashboard from "./pages/dashboard/Dashboard";
 import Discover from "./pages/discover/Discover";
+import Help from "./pages/help/Help";
 import Login from "./pages/login/Login";
 import Markets from "./pages/market/Markets";
 import Myportfolio from "./pages/myPortfolio/MyPortfolio";
@@ -32,6 +33,7 @@ function App() {
         <Route path="/trades" element={<Trades />} />
         <Route path="/discover" element={<Discover />} />
         <Route path="/settings" element={<Settings />} />
+        <Route path="/help" element={<Help />} />
       </Routes>
     </BrowserRouter>
   );
