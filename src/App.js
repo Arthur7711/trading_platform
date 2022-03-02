@@ -9,6 +9,7 @@ import News from "./pages/news/News";
 import Openpage from "./pages/openPage/OpenPage";
 import Register from "./pages/register/Register";
 import Scanner from "./pages/scanner/Scanner";
+import Settings from "./pages/settings/Settings";
 import Toptraders from "./pages/topTraders/TopTraders";
 import Tradechart from "./pages/tradeChart/Tradechart";
 import Trades from "./pages/trades/Trades";
@@ -30,6 +31,7 @@ function App() {
         <Route path="/news" element={<News />} />
         <Route path="/trades" element={<Trades />} />
         <Route path="/discover" element={<Discover />} />
+        <Route path="/settings" element={<Settings />} />
       </Routes>
     </BrowserRouter>
   );
