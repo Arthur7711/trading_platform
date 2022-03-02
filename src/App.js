@@ -26,6 +26,7 @@ function App() {
         <Route path="/charts" element={<Charts />} />
         <Route path="/trade-chart" element={<Tradechart />} />
         <Route path="/news" element={<News />} />
+        <Route path="/trades" element={<News />} />
       </Routes>
     </BrowserRouter>
   );
