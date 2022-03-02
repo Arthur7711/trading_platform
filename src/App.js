@@ -4,6 +4,7 @@ import Dashboard from "./pages/dashboard/Dashboard";
 import Login from "./pages/login/Login";
 import Markets from "./pages/market/Markets";
 import Myportfolio from "./pages/myPortfolio/MyPortfolio";
+import News from "./pages/news/News";
 import Openpage from "./pages/openPage/OpenPage";
 import Register from "./pages/register/Register";
 import Scanner from "./pages/scanner/Scanner";
@@ -24,6 +25,7 @@ function App() {
         <Route path="/scanner" element={<Scanner />} />
         <Route path="/charts" element={<Charts />} />
         <Route path="/trade-chart" element={<Tradechart />} />
+        <Route path="/news" element={<News />} />
       </Routes>
     </BrowserRouter>
   );
