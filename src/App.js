@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Charts from "./pages/charts/Charts";
 import Dashboard from "./pages/dashboard/Dashboard";
 import Login from "./pages/login/Login";
 import Markets from "./pages/market/Markets";
@@ -20,6 +21,7 @@ function App() {
         <Route path="/top" element={<Toptraders />} />
         <Route path="/market" element={<Markets />} />
         <Route path="/scanner" element={<Scanner />} />
+        <Route path="/charts" element={<Charts />} />
       </Routes>
     </BrowserRouter>
   );
