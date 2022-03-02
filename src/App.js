@@ -4,6 +4,7 @@ import Login from "./pages/login/Login";
 import Myportfolio from "./pages/myPortfolio/MyPortfolio";
 import Openpage from "./pages/openPage/OpenPage";
 import Register from "./pages/register/Register";
+import Toptraders from "./pages/topTraders/TopTraders";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/portfolio" element={<Myportfolio />} />
+        <Route path="/top" element={<Toptraders />} />
       </Routes>
     </BrowserRouter>
   );
