@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Charts from "./pages/charts/Charts";
 import Dashboard from "./pages/dashboard/Dashboard";
+import Discover from "./pages/discover/Discover";
 import Login from "./pages/login/Login";
 import Markets from "./pages/market/Markets";
 import Myportfolio from "./pages/myPortfolio/MyPortfolio";
@@ -10,6 +11,7 @@ import Register from "./pages/register/Register";
 import Scanner from "./pages/scanner/Scanner";
 import Toptraders from "./pages/topTraders/TopTraders";
 import Tradechart from "./pages/tradeChart/Tradechart";
+import Trades from "./pages/trades/Trades";
 
 function App() {
   return (
@@ -26,7 +28,8 @@ function App() {
         <Route path="/charts" element={<Charts />} />
         <Route path="/trade-chart" element={<Tradechart />} />
         <Route path="/news" element={<News />} />
-        <Route path="/trades" element={<News />} />
+        <Route path="/trades" element={<Trades />} />
+        <Route path="/discover" element={<Discover />} />
       </Routes>
     </BrowserRouter>
   );
