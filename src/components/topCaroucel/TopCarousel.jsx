@@ -47,8 +47,8 @@ const Topcarousel = () => {
   let sliderCount = market.length;
   return (
     <CarouselProvider
-      naturalSlideWidth={100}
-      naturalSlideHeight={125}
+      naturalSlideWidth={120}
+      naturalSlideHeight={80}
       totalSlides={sliderCount}
       visibleSlides={4}
       infinite={true}
