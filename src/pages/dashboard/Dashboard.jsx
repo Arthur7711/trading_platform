@@ -4,13 +4,14 @@ import Speedometer from "../../components/speedometer/Speedometer";
 import Topcarousel from "../../components/topCaroucel/TopCarousel";
 import Traders from "../../components/traders/Traders";
 import Tradeschart from "../../components/tradesChart/TradesChart";
+import styles from "./Dashboard.module.css";
 
 const Dashboard = () => {
   return (
     <div>
-      <Main> 
+      <Main>
         <Topcarousel />
-        <main>
+        <main className={styles.topMain}>
           <Traders />
           <Speedometer />
           <Tradeschart />

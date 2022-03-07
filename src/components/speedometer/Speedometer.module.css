@@ -1,0 +1,6 @@
+.speedArea {
+  width: 400px;
+  box-shadow: 12px 12px 25px rgba(16, 16, 18, 0.5),
+    -12px -12px 25px rgba(59, 68, 81, 0.5);
+  border-radius: 8px;
+}

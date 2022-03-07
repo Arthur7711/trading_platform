@@ -1,9 +1,10 @@
 import React from "react";
 import { TechnicalAnalysis } from "react-ts-tradingview-widgets";
+import styles from "./Speedometer.module.css";
 
 const Speedometer = () => {
   return (
-    <div style={{ width: 400 }}>
+    <div className={styles.speedArea}>
       <TechnicalAnalysis
         colorTheme="dark"
         width={400}

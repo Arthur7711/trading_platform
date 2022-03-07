@@ -47,7 +47,14 @@ export default function MyTabs({ arrs }) {
 
   return (
     <Box sx={{ width: "100%" }}>
-      <Box sx={{ maxWidth: { xs: 320, sm: 480 }, bgcolor: "", color: "#fff" }}>
+      <Box
+        sx={{
+          maxWidth: { xs: 320, sm: 530 },
+          bgcolor: "",
+          color: "#fff",
+          height: 350,
+        }}
+      >
         <Tabs
           value={value}
           onChange={handleChange}

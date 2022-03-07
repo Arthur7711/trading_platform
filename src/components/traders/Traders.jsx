@@ -1,5 +1,6 @@
 import React from "react";
 import MyTabs from "../tabs/tabs";
+import styles from "./Traders.module.css";
 
 const Traders = () => {
   const tabsItems = [
@@ -13,8 +14,8 @@ const Traders = () => {
   ];
 
   return (
-    <div>
-      <MyTabs arrs={tabsItems}/>
+    <div className={styles.traders}>
+      <MyTabs arrs={tabsItems} />
     </div>
   );
 };
