@@ -2,6 +2,7 @@ import React from "react";
 import Main from "../../components/main/Main";
 import Speedometer from "../../components/speedometer/Speedometer";
 import Topcarousel from "../../components/topCaroucel/TopCarousel";
+import Tradechat from "../../components/tradeChat/TradeChat";
 import Traders from "../../components/traders/Traders";
 import Tradeschart from "../../components/tradesChart/TradesChart";
 import styles from "./Dashboard.module.css";
@@ -14,6 +15,7 @@ const Dashboard = () => {
         <main className={styles.topMain}>
           <Traders />
           <Speedometer />
+          <Tradechat />
         </main>
         <main>
           <Tradeschart />
