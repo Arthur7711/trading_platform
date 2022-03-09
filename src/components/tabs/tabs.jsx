@@ -3,7 +3,6 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import PropTypes from "prop-types";
-import Typography from "@mui/material/Typography";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -15,12 +14,9 @@ function TabPanel(props) {
       id={`simple-tabpanel-${index}`}
       aria-labelledby={`simple-tab-${index}`}
       {...other}
+      style={{ padding: 0 }}
     >
-      {value === index && (
-        <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
-        </Box>
-      )}
+      {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
     </div>
   );
 }
@@ -38,7 +34,7 @@ function a11yProps(index) {
   };
 }
 
-export default function MyTabs({ arrs }) {
+export default function MyTabs({ arrs, tabsData }) {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -46,13 +42,12 @@ export default function MyTabs({ arrs }) {
   };
 
   return (
-    <Box sx={{ width: "100%" }}>
+    <Box sx={{ width: "100%", height: 350 }}>
       <Box
         sx={{
           maxWidth: { xs: 320, sm: 530 },
           bgcolor: "",
           color: "#fff",
-          height: 350,
         }}
       >
         <Tabs
@@ -75,7 +70,7 @@ export default function MyTabs({ arrs }) {
       </Box>
       {arrs?.map((el, i) => (
         <TabPanel key={i} value={value} index={i}>
-          {el}
+          {tabsData[el]}
         </TabPanel>
       ))}
     </Box>
