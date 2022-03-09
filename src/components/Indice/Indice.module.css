@@ -1,0 +1,28 @@
+.main {
+  display: flex;
+  align-items: flex-start;
+  color: #fff;
+  gap: 10px;
+}
+.avaArea {
+  position: relative;
+}
+.ellips {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
+.p1 {
+  color: #d2d2d2;
+  font-weight: 300;
+  font-size: 14px;
+}
+.p2 {
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+}
+.iconsArea {
+  display: flex;
+  justify-content: center;
+}
