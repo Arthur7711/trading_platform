@@ -13,7 +13,7 @@ const Indice = () => {
     <main className={styles.main}>
       <div className={styles.user}>
         <div className={styles.avaArea}>
-          <Avatar alt="user" src={girl} sx={{ width: 56, height: 56 }} />
+          <Avatar alt="user" src={girl} sx={{ width: 45, height: 45 }} />
           <div className={styles.ellips}>
             <EllipseStar />
           </div>
