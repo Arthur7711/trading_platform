@@ -1,7 +1,6 @@
 import React from "react";
 import Avatar from "@mui/material/Avatar";
 import styles from "./ChatItem.module.css";
-import girl from "../../assets/images/girl.png";
 
 const Chatitem = ({ items }) => {
   return (
