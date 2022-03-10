@@ -17,7 +17,7 @@ const Indice = () => {
           <div className={styles.ellips}>
             <EllipseStar />
           </div>
-        </div>
+        </div> 
         <p className={styles.userName}>User Name</p>
       </div>
       <div className={styles.trades}>
