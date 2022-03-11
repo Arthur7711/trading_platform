@@ -48,7 +48,7 @@ const Register = () => {
               <span className={styles.terms}> Terms of Service </span>
             </p>
           </label>
-          <button className={styles.btn}>Create Account</button>
+          <button className={styles.btn} onClick={()=>navigate('/login')}>Create Account</button>
           <div className={styles.linesArea}>
             <div className={styles.line}></div>
             <p>OR</p>

@@ -4,7 +4,7 @@ import styles from "./Login.module.css";
 import { ReactComponent as Eye } from "../../assets/images/eye.svg";
 import { ReactComponent as Google } from "../../assets/images/google.svg";
 import { ReactComponent as Fb } from "../../assets/images/fb.svg";
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   function showingInp(e) {
@@ -34,7 +34,9 @@ const Login = () => {
               <Eye onClick={(e) => showingInp(e)} />
             </label>
           </div>
-          <button className={styles.btn}>Login</button>
+          <button className={styles.btn} onClick={()=>navigate("/dashboard")}>
+            Login
+          </button>
           <div className={styles.linesArea}>
             <div className={styles.line}></div>
             <p>OR</p>
@@ -49,7 +51,8 @@ const Login = () => {
             Login with Facebook
           </div>
           <p className={styles.already}>
-          Don't have an account? <span onClick={()=>navigate('/register')}>Sign up</span>
+            Don't have an account?{" "}
+            <span onClick={() => navigate("/register")}>Sign up</span>
           </p>
         </div>
       </main>
