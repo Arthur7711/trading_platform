@@ -1,8 +1,10 @@
 import React, { Fragment } from "react";
 import Paymantitem from "../paymantItem/PaymantItem";
 import styles from "./Logregmain.module.css";
+import { API } from "../../API/API";
 
 const Logregmain = () => {
+
   const fakeData = [
     {
       data: [
