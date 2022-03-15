@@ -20,19 +20,22 @@ const Register = () => {
     name: "",
     email: "",
     password: "",
-    plan_id: 0,
+    plan_id: localStorage.getItem("paymant"),
   });
 
   async function registerRequest() {
-    API.post("login", requestData)
+    API.post("/register", requestData)
       .then((res, req) => {
-        console.log(res);
+        console.log(res, "reeeeees");
+        return navigate("/login");
       })
       .catch((err) => {
-        console.log(err);
+        // console.log(err.response.data.error.email[0], "eeeeeeee");
+        console.log(err.response);
       });
   }
-  console.log(requestData, "requestData");
+
+  // console.log(requestData, "requestData");
   return (
     <>
       <Logregheader />
@@ -71,7 +74,10 @@ const Register = () => {
                 type="password"
                 required
                 onChange={(e) =>
-                  setRequestDAta({ ...requestData, password: e.target.value })
+                  setRequestDAta({
+                    ...requestData,
+                    password: e.target.value,
+                  })
                 }
               />
               <Eye onClick={(e) => showingInp(e)} />
@@ -93,7 +99,7 @@ const Register = () => {
               <span className={styles.terms}> Terms of Service </span>
             </p>
           </label>
-          <button className={styles.btn} onClick={() => navigate("/login")}>
+          <button className={styles.btn} onClick={() => registerRequest()}>
             Create Account
           </button>
           <div className={styles.linesArea}>
@@ -110,7 +116,7 @@ const Register = () => {
             Sign up with Facebook
           </div>
           <p className={styles.already}>
-            Already registered?{" "}
+            Already registered?
             <span onClick={() => navigate("/login")}>Log In</span>
           </p>
         </div>
