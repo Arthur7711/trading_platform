@@ -25,9 +25,10 @@ const Login = () => {
     API.post("login", {})
       .then((res, req) => {
         console.log(res);
+        navigate("/dashboard");
       })
       .catch((err) => {
-        console.log(err);
+        console.log(err.response);
       });
   }
   return (
@@ -63,7 +64,7 @@ const Login = () => {
               <Eye onClick={(e) => showingInp(e)} />
             </label>
           </div>
-          <button className={styles.btn} onClick={() => navigate("/dashboard")}>
+          <button className={styles.btn} onClick={() => loginRequest()}>
             Login
           </button>
           <div className={styles.linesArea}>
