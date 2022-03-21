@@ -6,6 +6,12 @@ import { ReactComponent as Google } from "../../assets/images/google.svg";
 import { ReactComponent as Fb } from "../../assets/images/fb.svg";
 import { useNavigate } from "react-router-dom";
 import { API } from "../../API/API";
+import Snackbar from "@mui/material/Snackbar";
+import MuiAlert from "@mui/material/Alert";
+
+const Alert = React.forwardRef(function Alert(props, ref) {
+  return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+});
 
 const Register = () => {
   function showingInp(e) {
@@ -15,6 +21,7 @@ const Register = () => {
       e.target.parentNode.parentNode.childNodes[1].type = "password";
     }
   }
+
   const navigate = useNavigate();
   const [requestData, setRequestDAta] = useState({
     name: "",
@@ -22,6 +29,35 @@ const Register = () => {
     password: "",
     plan_id: localStorage.getItem("paymant"),
   });
+  const [open, setOpen] = React.useState(false);
+
+  const handleClick = () => {
+    setOpen(true);
+  };
+
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setOpen(false);
+  };
+
+  // const action = (
+  //   <React.Fragment>
+  //     <Button color="secondary" size="small" onClick={handleClose}>
+  //       UNDO
+  //     </Button>
+  //     <IconButton
+  //       size="small"
+  //       aria-label="close"
+  //       color="inherit"
+  //       onClick={handleClose}
+  //     >
+  //       <CloseIcon fontSize="small" />
+  //     </IconButton>
+  //   </React.Fragment>
+  // );
 
   async function registerRequest() {
     API.post("/register", requestData)
@@ -30,7 +66,7 @@ const Register = () => {
         return navigate("/login");
       })
       .catch((err) => {
-        // console.log(err.response.data.error.email[0], "eeeeeeee");
+        handleClick();
         console.log(err.response);
       });
   }
@@ -120,6 +156,12 @@ const Register = () => {
             <span onClick={() => navigate("/login")}>Log In</span>
           </p>
         </div>
+        <Snackbar open={open} autoHideDuration={5000} onClose={handleClose}>
+          <Alert onClose={handleClose} severity="error" sx={{ width: "100%" }}>
+            This is a error message!
+          </Alert>
+        </Snackbar>
+        ;
       </main>
     </>
   );

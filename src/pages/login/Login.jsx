@@ -6,6 +6,12 @@ import { ReactComponent as Google } from "../../assets/images/google.svg";
 import { ReactComponent as Fb } from "../../assets/images/fb.svg";
 import { useNavigate } from "react-router-dom";
 import { API } from "../../API/API";
+import Snackbar from "@mui/material/Snackbar";
+import MuiAlert from "@mui/material/Alert";
+
+const Alert = React.forwardRef(function Alert(props, ref) {
+  return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+});
 
 const Login = () => {
   const [requestData, setRequestDAta] = useState({
@@ -20,14 +26,29 @@ const Login = () => {
       e.target.parentNode.parentNode.childNodes[1].type = "password";
     }
   }
+  const [open, setOpen] = React.useState(false);
+
+  const handleClick = () => {
+    setOpen(true);
+  };
+
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setOpen(false);
+  };
+
   const navigate = useNavigate();
   async function loginRequest() {
-    API.post("login", {})
+    API.post("login", requestData)
       .then((res, req) => {
         console.log(res);
         navigate("/dashboard");
       })
       .catch((err) => {
+        handleClick();
         console.log(err.response);
       });
   }
@@ -85,6 +106,11 @@ const Login = () => {
             <span onClick={() => navigate("/register")}> Sign up</span>
           </p>
         </div>
+        <Snackbar open={open} autoHideDuration={5000} onClose={handleClose}>
+          <Alert onClose={handleClose} severity="error" sx={{ width: "100%" }}>
+            This is a error message!
+          </Alert>
+        </Snackbar>
       </main>
     </>
   );
