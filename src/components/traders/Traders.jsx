@@ -24,8 +24,11 @@ const Traders = () => {
   };
 
   return (
-    <div className={styles.traders}>
-      <MyTabs tabsData={tabsData} arrs={tabsItems} />
+    <div className={styles.mainPart}>
+      <p className={styles.title}>Traders</p>
+      <div className={styles.traders}>
+        <MyTabs tabsData={tabsData} arrs={tabsItems} />
+      </div>
     </div>
   );
 };

@@ -28,29 +28,32 @@ const Tradechat = () => {
     },
   ];
   return (
-    <main className={styles.main}>
-      <div className={styles.topPart}>
-        <div className={styles.add}>
-          <AddChatUser />
+    <div className={styles.mainPart}>
+      <p className={styles.title}>Trade Chat</p>
+      <main className={styles.main}>
+        <div className={styles.topPart}>
+          <div className={styles.add}>
+            <AddChatUser />
+          </div>
+          <div className={styles.add}>
+            <select className={styles.select} name="chat" id="">
+              <option value="allChat">All Chat</option>
+            </select>
+          </div>
+          <div className={styles.add}>
+            <IconButton>
+              <Search style={{ color: "#FFF" }} />
+            </IconButton>
+            <input type="text" className={styles.inp} />
+          </div>
         </div>
-        <div className={styles.add}>
-          <select className={styles.select} name="chat" id="">
-            <option value="allChat">All Chat</option>
-          </select>
+        <div className={styles.itemsArea}>
+          {incomingChatData.map((el, i) => (
+            <Chatitem items={el} key={i} />
+          ))}
         </div>
-        <div className={styles.add}>
-          <IconButton>
-            <Search style={{ color: "#FFF" }} />
-          </IconButton>
-          <input type="text" className={styles.inp} />
-        </div>
-      </div>
-      <div className={styles.itemsArea}>
-        {incomingChatData.map((el, i) => (
-          <Chatitem items={el} key={i} />
-        ))}
-      </div>
-    </main>
+      </main>
+    </div>
   );
 };
 

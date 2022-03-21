@@ -1,5 +1,6 @@
 import React from "react";
 import Main from "../../components/main/Main";
+import Analysis from "../../components/quickAnalysis/Analysis";
 import Speedometer from "../../components/speedometer/Speedometer";
 import Topcarousel from "../../components/topCaroucel/TopCarousel";
 import Tradechat from "../../components/tradeChat/TradeChat";
@@ -14,8 +15,9 @@ const Dashboard = () => {
         <Topcarousel />
         <main className={styles.topMain}>
           <Traders />
-          <Speedometer />
           <Tradechat />
+          <Speedometer />
+          <Analysis />
         </main>
         <main>
           <Tradeschart />
