@@ -19,7 +19,7 @@ const Dashboard = () => {
           <Speedometer />
           <Analysis />
         </main>
-        <main>
+        <main className={styles.topMain}>
           <Tradeschart />
         </main>
       </Main>
