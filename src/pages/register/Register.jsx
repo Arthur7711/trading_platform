@@ -43,22 +43,6 @@ const Register = () => {
     setOpen(false);
   };
 
-  // const action = (
-  //   <React.Fragment>
-  //     <Button color="secondary" size="small" onClick={handleClose}>
-  //       UNDO
-  //     </Button>
-  //     <IconButton
-  //       size="small"
-  //       aria-label="close"
-  //       color="inherit"
-  //       onClick={handleClose}
-  //     >
-  //       <CloseIcon fontSize="small" />
-  //     </IconButton>
-  //   </React.Fragment>
-  // );
-
   async function registerRequest() {
     API.post("/register", requestData)
       .then((res, req) => {
@@ -70,8 +54,6 @@ const Register = () => {
         console.log(err.response);
       });
   }
-
-  // console.log(requestData, "requestData");
   return (
     <>
       <Logregheader />
