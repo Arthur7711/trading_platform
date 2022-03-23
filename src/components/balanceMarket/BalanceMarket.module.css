@@ -1,0 +1,6 @@
+.main {
+  display: grid;
+  grid-template-columns: 6fr 2fr 4fr;
+  color: #fff;
+  margin: 20px 0;
+}

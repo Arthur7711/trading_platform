@@ -1,6 +1,7 @@
 import React from "react";
 import MyTabs from "../tabs/tabs";
 import styles from "./Marketscanner.module.css";
+import Marketindices from '../marketIndices/MarketIndices'
 
 const Marketscanner = () => {
   const tabsItems = [
@@ -14,14 +15,14 @@ const Marketscanner = () => {
   ];
   const tabsData = {
     All: "All",
-    Indices: "Indices",
+    Indices: <Marketindices /> ,
     Top: "Indices Futures",
     Traders: "Traders",
     Subscriptions: "Subscriptions",
     Stocs: "Stocs",
     Subscribe: "Subscribe",
   };
-  
+
   return (
     <div className={styles.mainPart}>
       <p className={styles.title}>Market Scanner</p>
