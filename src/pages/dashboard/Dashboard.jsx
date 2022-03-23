@@ -1,6 +1,7 @@
 import React from "react";
 import Main from "../../components/main/Main";
 import Marketscanner from "../../components/marketScanner/MarketScanner";
+import News from "../../components/news/News";
 import Analysis from "../../components/quickAnalysis/Analysis";
 import Speedometer from "../../components/speedometer/Speedometer";
 import Topcarousel from "../../components/topCaroucel/TopCarousel";
@@ -25,6 +26,7 @@ const Dashboard = () => {
           <Tradeschart />
           <Marketscanner />
           <Watchlist />
+          <News />
         </main>
       </Main>
     </div>
