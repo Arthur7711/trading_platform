@@ -35,7 +35,7 @@ function a11yProps(index) {
   };
 }
 
-export default function MyTabs({ arrs, tabsData }) {
+export default function MyTabs({ arrs, tabsData,WIDTHSIZE }) {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -46,7 +46,7 @@ export default function MyTabs({ arrs, tabsData }) {
     <Box sx={{ width: "100%", height: 350 }}>
       <Box
         sx={{
-          maxWidth: { xs: 320, sm: 530 },
+          maxWidth: { xs: 320, sm: WIDTHSIZE },
           bgcolor: "",
           color: "#fff",
         }}
