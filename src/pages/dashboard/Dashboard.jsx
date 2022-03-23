@@ -7,6 +7,7 @@ import Topcarousel from "../../components/topCaroucel/TopCarousel";
 import Tradechat from "../../components/tradeChat/TradeChat";
 import Traders from "../../components/traders/Traders";
 import Tradeschart from "../../components/tradesChart/TradesChart";
+import Watchlist from "../../components/watchlist/Watchlist";
 import styles from "./Dashboard.module.css";
 
 const Dashboard = () => {
@@ -23,6 +24,7 @@ const Dashboard = () => {
         <main className={styles.topMain}>
           <Tradeschart />
           <Marketscanner />
+          <Watchlist />
         </main>
       </Main>
     </div>
