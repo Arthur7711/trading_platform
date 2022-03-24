@@ -10,7 +10,7 @@ const Mostpopular = () => {
       </div>
       <p className={styles.title}>Lorem ipsum dolor sit amet, consectetur</p>
       <p className={styles.desc}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-    </div>
+    </div> 
   );
 };
 

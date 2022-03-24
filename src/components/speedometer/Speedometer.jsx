@@ -9,8 +9,8 @@ const Speedometer = () => {
       <div className={styles.speedArea}>
         <TechnicalAnalysis
           colorTheme="dark"
-          width={400}
-          height={390}
+          width={450}
+          height={410}
         ></TechnicalAnalysis>
       </div>
     </div>

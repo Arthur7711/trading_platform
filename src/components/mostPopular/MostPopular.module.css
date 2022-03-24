@@ -1,3 +1,20 @@
 .popular {
   width: 380px;
 }
+.imgBox {
+  width: 300px;
+}
+.imgBox img {
+  width: 100%;
+}
+.title {
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+  margin: 10px 0;
+}
+.desc {
+  font-size: 14px;
+  color: #c1c1c1;
+  font-weight: 400;
+}

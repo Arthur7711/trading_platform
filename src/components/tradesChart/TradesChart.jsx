@@ -5,11 +5,11 @@ import styles from "./Tradeschart.module.css";
 const Tradeschart = () => {
   return (
     <div className={styles.mainPart}>
-      <p className={styles.title}>Market Scanner</p>
+      <p className={styles.title}>Trades</p>
       <div className={styles.advanced}>
         <AdvancedRealTimeChart
           theme="dark"
-          width={550}
+          width={600}
           height={400}
         ></AdvancedRealTimeChart>
       </div>

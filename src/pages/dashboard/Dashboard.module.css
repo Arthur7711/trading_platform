@@ -1,5 +1,5 @@
 .topMain {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 30% 22% 22% 22%;
+  grid-gap: 30px;
 }

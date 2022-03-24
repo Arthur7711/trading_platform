@@ -27,7 +27,7 @@ const Watchlist = () => {
     <div className={styles.mainPart}>
       <p className={styles.title}>Watchlist</p>
       <div className={styles.traders}>
-        <MyTabs WIDTHSIZE={390} tabsData={tabsData} arrs={tabsItems} />
+        <MyTabs WIDTHSIZE={400} tabsData={tabsData} arrs={tabsItems} />
       </div>
     </div>
   );
