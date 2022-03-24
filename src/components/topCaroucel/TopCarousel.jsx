@@ -48,7 +48,7 @@ const Topcarousel = () => {
   return (
     <CarouselProvider
       naturalSlideWidth={120}
-      naturalSlideHeight={80}
+      naturalSlideHeight={50}
       totalSlides={sliderCount}
       visibleSlides={4}
       infinite={true}
