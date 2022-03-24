@@ -30,6 +30,7 @@ const Register = () => {
     plan_id: localStorage.getItem("paymant"),
   });
   const [open, setOpen] = React.useState(false);
+  const [errMessage, setErrMessage] = useState([]);
 
   const handleClick = () => {
     setOpen(true);
@@ -50,8 +51,9 @@ const Register = () => {
         return navigate("/login");
       })
       .catch((err) => {
+        setErrMessage(err.response.data.error);
         handleClick();
-        console.log(err.response);
+        // console.log(err.response.data.error);
       });
   }
   return (
@@ -140,7 +142,9 @@ const Register = () => {
         </div>
         <Snackbar open={open} autoHideDuration={5000} onClose={handleClose}>
           <Alert onClose={handleClose} severity="error" sx={{ width: "100%" }}>
-            This is a error message!
+            {errMessage.map((el, i) => (
+              <span key={i}>{el}</span>
+            ))}
           </Alert>
         </Snackbar>
         ;
