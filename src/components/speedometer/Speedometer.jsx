@@ -10,7 +10,7 @@ const Speedometer = () => {
         <TechnicalAnalysis
           colorTheme="dark"
           width={450}
-          height={410}
+          height={420}
         ></TechnicalAnalysis>
       </div>
     </div>
