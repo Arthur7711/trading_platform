@@ -16,9 +16,8 @@
 }
 .topPart {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 8px;
 }
 .add {
   padding: 10px 15px;

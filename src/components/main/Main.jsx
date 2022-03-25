@@ -58,7 +58,7 @@ const Main = ({ children }) => {
               <Search />
             </label>
           </div>
-        </div>
+        </div> 
       </header>
       <nav className={styles.navigate}>
         <div

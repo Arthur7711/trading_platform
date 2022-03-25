@@ -27,7 +27,7 @@ const Traders = () => {
     <div className={styles.mainPart}>
       <p className={styles.title}>Traders</p>
       <div className={styles.traders}>
-        <MyTabs WIDTHSIZE={530} tabsData={tabsData} arrs={tabsItems} />
+        <MyTabs WIDTHSIZE={600} tabsData={tabsData} arrs={tabsItems} />
       </div>
     </div>
   );
