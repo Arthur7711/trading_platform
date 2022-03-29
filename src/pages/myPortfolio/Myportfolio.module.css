@@ -1,0 +1,24 @@
+.mySelect {
+  font-weight: 700;
+  font-size: 20px;
+  color: #ffffff;
+  background-color: #1c2441;
+  border: none;
+  outline: none;
+}
+.mySelect option {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #ffffff;
+  border: 1px solid #1c2441;
+  outline: #1c2441;
+}
+.topMain {
+  background: #1c2441;
+  box-shadow: 12px 12px 25px rgba(16, 16, 18, 0.5),
+    -12px -12px 25px rgba(59, 68, 81, 0.5);
+  border-radius: 8px;
+  height: 450px;
+  margin-top: 20px;
+}

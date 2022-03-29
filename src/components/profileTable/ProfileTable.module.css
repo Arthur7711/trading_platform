@@ -1,0 +1,23 @@
+.bnbArea {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.title {
+  font-weight: 600;
+  font-size: 14px;
+  color: #ffffff;
+}
+.textArea {
+  margin-left: 5px;
+}
+.desc {
+  font-weight: 400;
+  font-size: 12px;
+  color: #7b8395;
+}
+.btnArea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
