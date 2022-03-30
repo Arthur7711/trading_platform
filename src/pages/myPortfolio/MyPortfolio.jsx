@@ -3,6 +3,7 @@ import Main from "../../components/main/Main";
 import styles from "./Myportfolio.module.css";
 import MyTabs from "../../components/tabs/tabs";
 import Profiletable from "../../components/profileTable/ProfileTable";
+import Myorders from "../../components/myOrders/MyOrders";
 
 const Myportfolio = () => {
   const tabsItems = [
@@ -37,6 +38,9 @@ const Myportfolio = () => {
           <div>
             <MyTabs WIDTHSIZE={"100%"} tabsData={tabsData} arrs={tabsItems} />
           </div>
+        </main>
+        <main className={styles.bottomMain}>
+          <Myorders />
         </main>
       </div>
     </Main>
