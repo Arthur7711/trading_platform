@@ -4,6 +4,7 @@ import styles from "./Myportfolio.module.css";
 import MyTabs from "../../components/tabs/tabs";
 import Profiletable from "../../components/profileTable/ProfileTable";
 import Myorders from "../../components/myOrders/MyOrders";
+import Balancedetails from "../../components/balanceDetails/BalanceDetails";
 
 const Myportfolio = () => {
   const tabsItems = [
@@ -41,6 +42,7 @@ const Myportfolio = () => {
         </main>
         <main className={styles.bottomMain}>
           <Myorders />
+          <Balancedetails />
         </main>
       </div>
     </Main>

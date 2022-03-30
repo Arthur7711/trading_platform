@@ -22,6 +22,9 @@
   height: 450px;
   margin-top: 20px;
 }
-.bottomMain{
+.bottomMain {
   margin-top: 30px;
+  display: grid;
+  grid-template-columns: 8fr 4fr;
+  gap: 30px;
 }
