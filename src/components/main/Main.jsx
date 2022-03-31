@@ -16,6 +16,9 @@ import { ReactComponent as Suitcase } from "../../assets/images/suitcase.svg";
 import { ReactComponent as Trader } from "../../assets/images/trader.svg";
 import { ReactComponent as MenuOpener } from "../../assets/images/openClose.svg";
 import { ReactComponent as Search } from "../../assets/images/search.svg";
+import { ReactComponent as DoubleSelect } from "../../assets/images/doubleSelect.svg";
+import { ReactComponent as OutlineNotifications } from "../../assets/images/outlineNotifications.svg";
+
 import logo from "../../assets/images/logo.png";
 import { Link } from "react-router-dom";
 
@@ -53,12 +56,22 @@ const Main = ({ children }) => {
       <header className={styles.header}>
         <div className={styles.headMainPart}>
           <div className={styles.search}>
+            <label className={styles.selectingLab}>
+              <input type="text" placeholder="What’s on your mind?" />
+              <DoubleSelect />
+            </label>
+          </div>
+          <div className={styles.search}>
             <label className={styles.searchLab}>
               <input type="text" placeholder="Search" />
               <Search />
             </label>
           </div>
-        </div> 
+        </div>
+        <div className={styles.notify}>
+          <OutlineNotifications />
+          <p>Notifications</p>
+        </div>
       </header>
       <nav className={styles.navigate}>
         <div

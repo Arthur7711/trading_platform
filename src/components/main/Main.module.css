@@ -19,11 +19,16 @@
 .headMainPart {
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  gap: 20px;
 }
 .searchLab {
   position: relative;
 }
-.searchLab input {
+.selectingLab {
+  position: relative;
+}
+.selectingLab input {
   width: 583px;
   height: 40px;
   background: #3b4568;
@@ -32,10 +37,35 @@
   border: none;
   color: #d2d2d2;
 }
+.searchLab input {
+  width: 320px;
+  height: 40px;
+  background: #3b4568;
+  border-radius: 20px;
+  padding-left: 50px;
+  border: none;
+  color: #d2d2d2;
+}
+.selectingLab svg {
+  position: absolute;
+  top: -2px;
+  left: 10px;
+}
 .searchLab svg {
   position: absolute;
   top: -2px;
   left: 10px;
+}
+.notify {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  height: 40px;
+  background: #3b4568;
+  border-radius: 20px;
+  padding: 0 20px;
+  color: #d2d2d2;
 }
 /* Navigate */
 .openMenu {
@@ -127,5 +157,5 @@
 }
 .main {
   grid-area: m;
-  padding: 15px
+  padding: 15px;
 }
